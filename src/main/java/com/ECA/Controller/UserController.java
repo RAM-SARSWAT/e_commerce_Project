@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-
+    // send Verification code API
     @GetMapping(value = "/sendVerificationCode")
     public ResponseEntity<Response> SendVerificationCode(@RequestParam(value = "UserName") String userName, @RequestParam(value = "MobileNumber") Long mobileNumber) throws Exception {
         return new ResponseEntity<>(new Response("SUCCESS", userService.sendVerificationCode(userName, mobileNumber), HttpStatus.OK), HttpStatus.OK);
