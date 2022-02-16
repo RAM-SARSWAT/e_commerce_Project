@@ -16,18 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class MySecurity extends WebSecurityConfigurerAdapter {
 
     /*
-
-
     ROLE----->high level overview --->Normal:READ
     Authority-->permission-->READ
     Admin-->READ,WRITE,Update
-
-
-
-
-
-
-
      */
 
 
