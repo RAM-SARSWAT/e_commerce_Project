@@ -1,0 +1,44 @@
+server:
+    port: 2332
+    servlet:
+      context-path: /eca-service
+spring:
+  datasource:
+      url: jdbc:oracle:thin:@localhost:1521/xe
+      username: system
+      password: root
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        enable_lazy_load_no_trans: true
+        proc:
+          param_null_passing: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      use_sql_comments: true
+      format_sql: true
+  servlet:
+      multipart:
+        enabled: true
+        max-file-size: 1MB
+        max-request-size: 1MB
+  task:
+      scheduling:
+        pool:
+          size: 20
+  logging:
+      level:
+        org:
+          hibernate:
+            type: trace
+
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%X{CORRELATION_ID}] -%msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%X{CORRELATION_ID}] [%thread] %-5level %logger{40}-%msg%n'
+spring.profiles: local
+
+

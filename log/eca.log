@@ -1,0 +1,125 @@
+2022-02-14 13:37:13 [] [restartedMain] INFO  com.ECA.EcaApplication-Starting EcaApplication using Java 1.8.0_291 on HODEVLT310186 with PID 4760 (D:\ECA\build\classes\java\main started by Ramdev.Saraswat in D:\ECA)
+2022-02-14 13:37:13 [] [restartedMain] INFO  com.ECA.EcaApplication-The following profiles are active: local
+2022-02-14 13:37:14 [] [restartedMain] WARN  o.s.b.c.config.ConfigDataEnvironment-Property 'spring.profiles' imported from location 'class path resource [application-local.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-local.yml] - 10:20]
+2022-02-14 13:37:14 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-14 13:37:14 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-14 13:37:15 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-14 13:37:15 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2022-02-14 13:37:15 [] [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 2332 (http)
+2022-02-14 13:37:15 [] [restartedMain] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2022-02-14 13:37:15 [] [restartedMain] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-14 13:37:16 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/eca-service]-Initializing Spring embedded WebApplicationContext
+2022-02-14 13:37:16 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 1829 ms
+2022-02-14 13:37:16 [] [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-14 13:37:16 [] [restartedMain] INFO  org.hibernate.Version-HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-14 13:37:16 [] [restartedMain] INFO  org.hibernate.annotations.common.Version-HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-14 13:37:16 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2022-02-14 13:37:16 [] [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource-Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-02-14 13:37:16 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2022-02-14 13:37:17 [] [restartedMain] INFO  org.hibernate.dialect.Dialect-HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2022-02-14 13:37:17 [] [restartedMain] INFO  o.h.e.boot.internal.EnversServiceImpl-Envers integration enabled? : true
+2022-02-14 13:37:17 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-14 13:37:17 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-14 13:37:17 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration-spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-14 13:37:17 [] [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration-
+
+Using generated security password: 5cd4df0f-4afd-40b6-a3b2-9fc556eeca9b
+
+2022-02-14 13:37:18 [] [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain-Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2191384e, org.springframework.security.web.context.SecurityContextPersistenceFilter@73e9e0be, org.springframework.security.web.header.HeaderWriterFilter@363fe3ac, org.springframework.security.web.csrf.CsrfFilter@5714b96c, org.springframework.security.web.authentication.logout.LogoutFilter@235f0957, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3522d5f1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@38805214, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@166f1d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15673849, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63129163, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b8e778e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d6f24cc, org.springframework.security.web.session.SessionManagementFilter@620cf2f5, org.springframework.security.web.access.ExceptionTranslationFilter@7d14d2c1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70872aa8]
+2022-02-14 13:37:18 [] [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-Unable to start LiveReload server
+2022-02-14 13:37:18 [] [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 2332 (http) with context path '/eca-service'
+2022-02-14 13:37:18 [] [restartedMain] INFO  com.ECA.EcaApplication-Started EcaApplication in 4.844 seconds (JVM running for 6.528)
+2022-02-14 13:37:51 [] [http-nio-2332-exec-3] INFO  o.a.c.c.C.[.[localhost].[/eca-service]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-14 13:37:51 [] [http-nio-2332-exec-3] INFO  o.s.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2022-02-14 13:37:51 [] [http-nio-2332-exec-3] INFO  o.s.web.servlet.DispatcherServlet-Completed initialization in 2 ms
+2022-02-14 13:39:43 [] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-14 13:39:43 [] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2022-02-14 13:39:43 [] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2022-02-14 13:39:48 [] [restartedMain] INFO  com.ECA.EcaApplication-Starting EcaApplication using Java 1.8.0_291 on HODEVLT310186 with PID 4444 (D:\ECA\build\classes\java\main started by Ramdev.Saraswat in D:\ECA)
+2022-02-14 13:39:48 [] [restartedMain] INFO  com.ECA.EcaApplication-The following profiles are active: local
+2022-02-14 13:39:48 [] [restartedMain] WARN  o.s.b.c.config.ConfigDataEnvironment-Property 'spring.profiles' imported from location 'class path resource [application-local.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-local.yml] - 10:20]
+2022-02-14 13:39:48 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-14 13:39:48 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-14 13:39:49 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-14 13:39:49 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2022-02-14 13:39:50 [] [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 2332 (http)
+2022-02-14 13:39:50 [] [restartedMain] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2022-02-14 13:39:50 [] [restartedMain] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-14 13:39:50 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/eca-service]-Initializing Spring embedded WebApplicationContext
+2022-02-14 13:39:50 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 1608 ms
+2022-02-14 13:39:50 [] [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-14 13:39:50 [] [restartedMain] INFO  org.hibernate.Version-HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-14 13:39:51 [] [restartedMain] INFO  org.hibernate.annotations.common.Version-HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-14 13:39:51 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2022-02-14 13:39:51 [] [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource-Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-02-14 13:39:51 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2022-02-14 13:39:51 [] [restartedMain] INFO  org.hibernate.dialect.Dialect-HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2022-02-14 13:39:51 [] [restartedMain] INFO  o.h.e.boot.internal.EnversServiceImpl-Envers integration enabled? : true
+2022-02-14 13:39:51 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-14 13:39:51 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-14 13:39:51 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration-spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-14 13:39:52 [] [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration-
+
+Using generated security password: 41c05182-8308-43ab-b23c-882d1c8fe617
+
+2022-02-14 13:39:52 [] [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain-Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7968b1ae, org.springframework.security.web.context.SecurityContextPersistenceFilter@171a6f73, org.springframework.security.web.header.HeaderWriterFilter@21b45ab0, org.springframework.security.web.csrf.CsrfFilter@4ffa4862, org.springframework.security.web.authentication.logout.LogoutFilter@55a4145, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e37188b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7af58628, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@88a2d78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1518776d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71eb8a5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72893f08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5eff901b, org.springframework.security.web.session.SessionManagementFilter@3ea3d1d5, org.springframework.security.web.access.ExceptionTranslationFilter@e323744, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d3b4d3d]
+2022-02-14 13:39:52 [] [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-Unable to start LiveReload server
+2022-02-14 13:39:52 [] [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 2332 (http) with context path '/eca-service'
+2022-02-14 13:39:52 [] [restartedMain] INFO  com.ECA.EcaApplication-Started EcaApplication in 4.377 seconds (JVM running for 6.177)
+2022-02-14 13:40:10 [] [http-nio-2332-exec-1] INFO  o.a.c.c.C.[.[localhost].[/eca-service]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-14 13:40:10 [] [http-nio-2332-exec-1] INFO  o.s.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2022-02-14 13:40:10 [] [http-nio-2332-exec-1] INFO  o.s.web.servlet.DispatcherServlet-Completed initialization in 1 ms
+2022-02-14 13:53:14 [] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-14 13:53:14 [] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2022-02-14 13:53:14 [] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2022-02-14 13:53:20.157  INFO 12480 --- [restartedMain] com.ECA.EcaApplication                   : Starting EcaApplication using Java 1.8.0_291 on HODEVLT310186 with PID 12480 (D:\ECA\build\classes\java\main started by Ramdev.Saraswat in D:\ECA)
+2022-02-14 13:53:20.159  INFO 12480 --- [restartedMain] com.ECA.EcaApplication                   : The following profiles are active: local
+2022-02-14 13:53:20.537  WARN 12480 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application-local.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-local.yml] - 10:20]
+2022-02-14 13:53:20.539  INFO 12480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-14 13:53:20.539  INFO 12480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-14 13:53:21.513  INFO 12480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-14 13:53:21.536  INFO 12480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2022-02-14 13:53:22.585  INFO 12480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2332 (http)
+2022-02-14 13:53:22.599  INFO 12480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-14 13:53:22.599  INFO 12480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-14 13:53:22.948  INFO 12480 --- [restartedMain] o.a.c.c.C.[.[localhost].[/eca-service]   : Initializing Spring embedded WebApplicationContext
+2022-02-14 13:53:22.948  INFO 12480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2408 ms
+2022-02-14 13:53:23.300  INFO 12480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-14 13:53:23.398  INFO 12480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-14 13:53:23.641  INFO 12480 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-14 13:53:23.796  INFO 12480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-14 13:53:23.799  WARN 12480 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-02-14 13:53:23.979  INFO 12480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-14 13:53:23.998  INFO 12480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2022-02-14 13:53:24.165  INFO 12480 --- [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2022-02-14 13:53:24.427  INFO 12480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-14 13:53:24.441  INFO 12480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-14 13:53:24.532  WARN 12480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-14 13:53:25.009  INFO 12480 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 66f0ca90-02f9-4308-8acc-8ec15b56a7a4
+
+2022-02-14 13:53:25.141  INFO 12480 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f158f11, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ce71712, org.springframework.security.web.header.HeaderWriterFilter@531d371e, org.springframework.security.web.csrf.CsrfFilter@2d73e221, org.springframework.security.web.authentication.logout.LogoutFilter@57a329a8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@386cd34b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1b0d387a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b3aeb45, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@93fafc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66f5d182, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c6abf85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f8f1444, org.springframework.security.web.session.SessionManagementFilter@7b519032, org.springframework.security.web.access.ExceptionTranslationFilter@6b286996, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7329df5d]
+2022-02-14 13:53:25.204  WARN 12480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-14 13:53:25.248  INFO 12480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2332 (http) with context path '/eca-service'
+2022-02-14 13:53:25.263  INFO 12480 --- [restartedMain] com.ECA.EcaApplication                   : Started EcaApplication in 5.76 seconds (JVM running for 7.664)
+2022-02-14 13:53:44.669  INFO 12480 --- [http-nio-2332-exec-1] o.a.c.c.C.[.[localhost].[/eca-service]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-14 13:53:44.669  INFO 12480 --- [http-nio-2332-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-14 13:53:44.670  INFO 12480 --- [http-nio-2332-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-14 14:45:33 [] [restartedMain] WARN  o.s.b.c.config.ConfigDataEnvironment-Property 'spring.profiles' imported from location 'class path resource [application-local.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-local.yml] - 1:18]
+2022-02-14 14:45:33 [] [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>:
+
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+
+Action:
+
+Update your application's configuration
+

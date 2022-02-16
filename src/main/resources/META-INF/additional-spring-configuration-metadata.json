@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "servlet.multipart.enabled",
+      "type": "java.lang.String",
+      "description": "Description for servlet.multipart.enabled."
+  }
+] }
