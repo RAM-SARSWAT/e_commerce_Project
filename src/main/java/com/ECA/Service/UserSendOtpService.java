@@ -1,5 +1,9 @@
 package com.ECA.Service;
 
+import com.ECA.Exception.BadRequestException;
+
 public interface UserSendOtpService {
-      StringBuffer sendVerificationCode(String user,Long mobileNumber) throws Exception;
+    StringBuffer sendVerificationCode(String userName, Long mobileNumber) throws Exception;
+
+    String checkVerificationCode(Long otp, Long mobileNumber) throws BadRequestException;
 }

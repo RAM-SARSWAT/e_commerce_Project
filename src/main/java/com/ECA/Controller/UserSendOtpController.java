@@ -18,9 +18,16 @@ public class UserSendOtpController {
     @Autowired
     UserSendOtpService userService;
 
-    // send Verification code API
+    // send Verification code
     @GetMapping(value = "/userSendOtp")
-    public ResponseEntity<Response> SendVerificationCode(@RequestParam(value = "UserName") String userName, @RequestParam(value = "MobileNumber") Long mobileNumber) throws Exception {
+    public ResponseEntity<Response> sendVerificationCode(@RequestParam(value = "UserName") String userName, @RequestParam(value = "MobileNumber") Long mobileNumber) throws Exception {
         return new ResponseEntity<>(new Response("SUCCESS", userService.sendVerificationCode(userName, mobileNumber), HttpStatus.OK), HttpStatus.OK);
     }
+    // verify OTP
+
+    @GetMapping(value = "/verifyOtp")
+    public ResponseEntity<Response> checkVerificationCode(@RequestParam(value = "otp") Long otp, @RequestParam(value = "MobileNumber") Long mobileNumber) throws Exception {
+        return new ResponseEntity<>(new Response("SUCCESS", userService.checkVerificationCode(otp, mobileNumber), HttpStatus.OK), HttpStatus.OK);
+    }
+
 }
