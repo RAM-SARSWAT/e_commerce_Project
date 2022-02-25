@@ -27,16 +27,24 @@ public class UserSendOtpServiceImp implements UserSendOtpService {
     @Transactional(rollbackOn = Exception.class)
     public StringBuffer sendVerificationCode(String userName, Long mobileNumber) throws Exception {
         int OTP;
-        UserDetails userDetails = userDetailsRepository.findAllByMobileNumber(mobileNumber);
-        if (userDetails.getUserName() != null) {
-            throw new BadRequestException("This Mobile Number Is Already Register", HttpStatus.BAD_REQUEST);
+        if(mobileNumber == null){
+            throw new BadRequestException("Please Enter Mobile Number",HttpStatus.BAD_REQUEST);
+        }
+        if(userName == null){
+            throw new BadRequestException("Please Enter Your Name",HttpStatus.BAD_REQUEST);
+        }
+        UserDetails userDetails= userDetailsRepository.findAllByMobileNumber(mobileNumber);
+            if ( userDetails != null && userDetails.getUserName() != null) {
+                throw new BadRequestException("This Mobile Number Is Already Register", HttpStatus.BAD_REQUEST);
+            }
+        if ( userDetails == null ) {
+            userDetails= new UserDetails();
         }
         Random random = new Random();
         OTP = random.nextInt(NUMBER);
-        UserDetails userDetail=new UserDetails();
-        userDetail.setMobileNumber(mobileNumber);
-        userDetail.setOtp((long) OTP);
-        userDetailsRepository.save(userDetail);
+        userDetails.setMobileNumber(mobileNumber);
+        userDetails.setOtp((long) OTP);
+        userDetailsRepository.save(userDetails);
         String Message = URLEncoder.encode("Dear " + userName + " your OTP is " + OTP, "UTF-8");
         String route = "otp";
         String myURL = API_URL + API_KEY + "&variables_values=" + Message + "&route=" + route + "&numbers=" + mobileNumber;
