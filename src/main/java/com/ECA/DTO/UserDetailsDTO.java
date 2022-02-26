@@ -11,6 +11,7 @@ public class UserDetailsDTO {
     private Long mobileNumber;
     private String password;
     private String email;
+    private String city;
     private String state;
     private UserType userType;
     private Roles roles;

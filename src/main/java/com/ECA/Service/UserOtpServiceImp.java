@@ -79,6 +79,9 @@ public class UserOtpServiceImp implements UserOtpService {
     @Override
     public String checkVerificationCode(Long otp, Long mobileNumber) throws BadRequestException {
         UserDetails userDetails = userDetailsRepository.findAllByMobileNumber(mobileNumber);
+        if(userDetails==null){
+            throw new BadRequestException(NO_RECORD_FOUND,HttpStatus.BAD_REQUEST);
+        }
         if (!Objects.equals(userDetails.getOtp(), otp)) {
             throw new BadRequestException(WRONG_OTP, HttpStatus.BAD_REQUEST);
         }

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 
 import static com.ECA.Constant.Constant.*;
@@ -23,14 +24,17 @@ public class UserServiceImp implements UserService {
     UserDetailsRepository userDetailsRepository;
 
     @Override
-    public String registerDetails(UserDetailsDTO userDetailsDTO) {
-        UserDetails userDetails;
-        if (userDetailsDTO.getUser_Id() != null) {
-            userDetails = userDetailsRepository.findAllByMobileNumber(userDetailsDTO.getMobileNumber());
-        } else {
-            userDetails = new UserDetails();
+    @Transactional(rollbackOn = Exception.class)
+    public String registerDetails(UserDetailsDTO userDetailsDTO) throws BadRequestException {
+        UserDetails userDetails = userDetailsRepository.findAllByMobileNumber(userDetailsDTO.getMobileNumber());
+        if(userDetails == null){
+            throw new BadRequestException(NO_RECORD_FOUND,HttpStatus.BAD_REQUEST);
         }
-        BeanUtils.copyProperties(userDetailsDTO, userDetails);
+        userDetails.setUserName(userDetailsDTO.getUserName());
+        userDetails.setPassword(userDetailsDTO.getPassword());
+        userDetails.setCity(userDetailsDTO.getCity());
+        userDetails.setEmail(userDetailsDTO.getEmail());
+        userDetails.setState(userDetailsDTO.getState());
         userDetails.setCreatedBy(userDetailsDTO.getUserName());
         userDetails.setCreatedOn(LocalDate.now());
         userDetails.setModifiedBy(userDetailsDTO.getUserName());
