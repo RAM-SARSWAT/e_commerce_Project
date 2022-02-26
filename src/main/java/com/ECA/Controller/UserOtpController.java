@@ -32,7 +32,7 @@ public class UserOtpController {
         return new ResponseEntity<>(new Response(SUCCESS, userOtpService.checkVerificationCode(otp, mobileNumber), HttpStatus.OK), HttpStatus.OK);
     }
 
-    // forget Password
+    // verify during forget Password
 
     @GetMapping(value = FORGET_PASSWORD)
     public ResponseEntity<Response>forgetPassword(@RequestParam(value =MOBILE_NUMBER) Long mobileNumber) throws BadRequestException, IOException {
@@ -44,6 +44,9 @@ public class UserOtpController {
     public ResponseEntity<Response>editPassword(@RequestParam(value =MOBILE_NUMBER)Long mobileNumber,@RequestParam(value = OLD_PASSWORD) String oldPassword,@RequestParam(value = NEW_PASSWORD)String newPassword,@RequestParam(value = CONFIRM_PASSWORD)String confirmPassword) throws BadRequestException {
         return new ResponseEntity<>(new Response(SUCCESS, userOtpService.editPassword(mobileNumber,oldPassword,newPassword,confirmPassword),HttpStatus.OK),HttpStatus.OK);
     }
-
-
+    // forget Password
+     @GetMapping(value = UPDATE_PASSWORD)
+     public ResponseEntity<Response>updatePassword(@RequestParam(value =MOBILE_NUMBER)Long mobileNumber,@RequestParam(value = NEW_PASSWORD)String newPassword,@RequestParam(value = CONFIRM_PASSWORD) String confirmPassword) throws BadRequestException {
+        return new ResponseEntity<>(new Response(SUCCESS,userOtpService.updatePassword(mobileNumber,newPassword,confirmPassword),HttpStatus.OK),HttpStatus.OK);
+     }
 }

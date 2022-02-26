@@ -79,6 +79,9 @@ public class UserOtpServiceImp implements UserOtpService {
     @Override
     public String checkVerificationCode(Long otp, Long mobileNumber) throws BadRequestException {
         UserDetails userDetails = userDetailsRepository.findAllByMobileNumber(mobileNumber);
+        if(userDetails==null){
+            throw new BadRequestException(NO_RECORD_FOUND,HttpStatus.BAD_REQUEST);
+        }
         if (!Objects.equals(userDetails.getOtp(), otp)) {
             throw new BadRequestException(WRONG_OTP, HttpStatus.BAD_REQUEST);
         }
@@ -105,24 +108,36 @@ public class UserOtpServiceImp implements UserOtpService {
         if(oldPassword == null){
             throw new BadRequestException(ENTER_OLD_PASSWORD,HttpStatus.BAD_REQUEST);
         }
+        UserDetails userDetails=userDetailsRepository.findAllByMobileNumber(mobileNumber);
+        if(userDetails.getPassword().equals(oldPassword)){
+            updateOldPassword(mobileNumber,newPassword,confirmPassword);
+            return PASSWORD_SUCCESS;
+        }else {
+            throw new BadRequestException(WRONG_OLD_PASSWORD,HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    private void updateOldPassword(Long mobileNumber,String newPassword, String confirmPassword) throws BadRequestException {
         if(newPassword == null){
             throw new BadRequestException(ENTER_NEW_PASSWORD,HttpStatus.BAD_REQUEST);
         }
         if(confirmPassword == null){
             throw new BadRequestException(ENTER_CONFIRM_PASSWORD,HttpStatus.BAD_REQUEST);
         }
-        UserDetails userDetails=userDetailsRepository.findAllByMobileNumber(mobileNumber);
-        if(userDetails.getPassword().equals(oldPassword)){
-            if(newPassword.equals(confirmPassword)){
-                userDetails.setPassword(newPassword);
-                userDetailsRepository.save(userDetails);
-                return PASSWORD_SUCCESS;
-            }else {
-                throw new BadRequestException(OLD_PASSWORD_AND_NEW_PASSWORD_NOT_MATCH,HttpStatus.BAD_REQUEST);
-            }
+        if(newPassword.equals(confirmPassword)){
+            UserDetails userDetails=userDetailsRepository.findAllByMobileNumber(mobileNumber);
+            userDetails.setPassword(newPassword);
+            userDetailsRepository.save(userDetails);
         }else {
-            throw new BadRequestException(WRONG_OLD_PASSWORD,HttpStatus.BAD_REQUEST);
+            throw new BadRequestException(OLD_PASSWORD_AND_NEW_PASSWORD_NOT_MATCH,HttpStatus.BAD_REQUEST);
         }
+
+    }
+
+    @Override
+    public String updatePassword(Long mobileNumber, String newPassword, String confirmPassword) throws BadRequestException {
+        updateOldPassword(mobileNumber,newPassword,confirmPassword);
+        return PASSWORD_SUCCESS;
     }
 }
 

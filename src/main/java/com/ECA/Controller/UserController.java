@@ -19,7 +19,7 @@ public class UserController {
 
     // Register User Details
     @PostMapping(SAVE_DETAILS)
-    public ResponseEntity<Response> registerDetails(@RequestBody UserDetailsDTO userDetailsDTO) {
+    public ResponseEntity<Response> registerDetails(@RequestBody UserDetailsDTO userDetailsDTO) throws BadRequestException {
         return new ResponseEntity<>(new Response(SUCCESS, userService.registerDetails(userDetailsDTO), HttpStatus.OK), HttpStatus.OK);
     }
     // Get User Details

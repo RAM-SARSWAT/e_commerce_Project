@@ -21,7 +21,7 @@ public class Constant {
     public static final String  ENTER_OLD_PASSWORD="Please Enter Old Password";
     public static final String ENTER_NEW_PASSWORD="Please Enter New Password";
     public static final String ENTER_CONFIRM_PASSWORD="Please Enter Confirm Password";
-    public static final String OLD_PASSWORD_AND_NEW_PASSWORD_NOT_MATCH="New Password And Confirm Password Not Match";
+    public static final String OLD_PASSWORD_AND_NEW_PASSWORD_NOT_MATCH="New Password And Confirm Password Does Not Match";
     public static final String WRONG_OLD_PASSWORD="Wrong Old Password";
     public static final String MOBILE_NUMBER_ALREADY_REGISTER="This Mobile Number Is Already Register";
     public static final String ENTER_YOUR_NAME="Please Enter Your Name";
@@ -34,6 +34,7 @@ public class Constant {
     public static final String VERIFY_OTP="/verifyOtp";
     public static final String FORGET_PASSWORD="/forgetPassword";
     public static final String EDIT_PASSWORD="/editPassword";
+    public static final String UPDATE_PASSWORD="/updatePassword";
 
     // Project Url
     public static final String ECA="/eca";

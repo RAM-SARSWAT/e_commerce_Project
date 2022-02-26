@@ -12,4 +12,6 @@ public interface UserOtpService {
     StringBuffer forgetPassword(Long mobileNumber) throws BadRequestException, IOException;
 
     String editPassword(Long mobileNumber, String oldPassword, String newPassword, String confirmPassword) throws BadRequestException;
+
+    String updatePassword(Long mobileNumber, String newPassword, String confirmPassword) throws BadRequestException;
 }
