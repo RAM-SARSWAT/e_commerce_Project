@@ -40,6 +40,5 @@ logging:
     console: '%d{yyyy-MM-dd HH:mm:ss} [%X{CORRELATION_ID}] -%msg%n'
     file: '%d{yyyy-MM-dd HH:mm:ss} [%X{CORRELATION_ID}] [%thread] %-5level %logger{40}-%msg%n'
 spring.profiles: local
-#Testing 
 
 
