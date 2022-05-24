@@ -18,6 +18,7 @@ package com.ECA.Exception;
 import com.ECA.DTO.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -25,7 +26,7 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import javax.validation.ConstraintViolationException;
 import javax.net.ssl.SSLHandshakeException;
 import java.io.EOFException;
 import java.io.FileNotFoundException;
@@ -94,6 +95,20 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleEOFException(EOFException ex) {
         logger.info("EOF Exception occurs => {}", ex);
         return new ResponseEntity<>(new Response(ERROR_MSG, HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = ConstraintViolationException.class)
+    @ResponseBody
+    public ResponseEntity<Object> handleEOFException(ConstraintViolationException ex) {
+        logger.info("ConstraintViolationException occurs => {}", ex);
+        return new ResponseEntity<>(new Response(ex.getConstraintViolations().iterator().next().getMessageTemplate(), HttpStatus.BAD_REQUEST), HttpStatus.OK);
+    }
+
+    @ExceptionHandler(value = DataIntegrityViolationException.class)
+    @ResponseBody
+    public ResponseEntity<Object> handleEOFException(DataIntegrityViolationException ex) {
+        logger.info("DataIntegrityViolationException occurs => {}", ex);
+        return new ResponseEntity<>(new Response(ex.getMessage(), HttpStatus.BAD_REQUEST), HttpStatus.OK);
     }
 
 }
